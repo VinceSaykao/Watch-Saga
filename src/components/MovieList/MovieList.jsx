@@ -12,7 +12,10 @@ function MovieList() {
 
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
+        
     }, []);
+
+
 
     function addMovie() {
         history.push('/addMovie')
@@ -21,7 +24,9 @@ function MovieList() {
     function clickThis(movie) {
         console.log(movie.id, movie);
         history.push('/details');
-        dispatch({ type: 'DETAILS', payload: movie})
+        dispatch({ type: 'DETAILS', payload: movie});
+
+        dispatch({type: 'FETCH_GENRES', payload: movie.id})
 
     }
 

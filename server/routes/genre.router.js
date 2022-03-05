@@ -25,14 +25,4 @@ router.get('/:id', (req, res) => {
 
 module.exports = router;
 
-// where movie id=$1
 
-
-// select genres.name, movies.title
-// from movies
-// join movies_genres
-// on movies.id = movies_genres.movie_id 
-// join genres
-// on genres.id = movies_genres.genre_id
-// where movies.id = $1
-// group by movies.title, genres.name;
