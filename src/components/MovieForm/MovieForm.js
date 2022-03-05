@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 
 export default function MovieForm() {
 
+
+    
     // local state that will be an empty string and be updated with new value upon user input
     const [movieInput, setMovieInput] = useState('');
     let [ urlInput, setUrlInput ] = useState('');
     let [descriptionInput, setDescriptionInput ] = useState('');
 
     const dispatch = useDispatch();
+
 
     // this function will dispatch to root-saga when submit is clicked
     function handleSubmit() {
@@ -24,6 +28,7 @@ export default function MovieForm() {
         setMovieInput('');
         setUrlInput('');
         setDescriptionInput('');
+
 
     }
 
