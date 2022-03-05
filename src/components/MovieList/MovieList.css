@@ -12,7 +12,8 @@
 }
 
 body {
-  background-image: url("https://coolhdwall.com/storage/202105/the-batman-movie-4k-wallpaper-3840x2160.jpg");
+  /* background-image: url("https://coolhdwall.com/storage/202105/the-batman-movie-4k-wallpaper-3840x2160.jpg"); */
+  background-color: #444;
   background-size: cover;
   background-position: -300px -300px;
 }

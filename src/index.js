@@ -20,14 +20,27 @@ function* rootSaga() {
 
 // genre Saga
 function* fetchGenre(action) {
+    console.log(action.payload);
     try {
-        const details = yield axios.get(`/api/movie${action.payload}`);
-        yield({type: 'SET_GENRES', payload: details.data});
+        const details = yield axios.get(`/api/genre/${action.payload}`);
+        console.log(details.data);
+        yield put ({type: 'SET_GENRES', payload: details.data});
+
     } catch {
         console.log('rut ro scoob');
     }
 }; // end fetchGenre
 
+// Used to store the movie genres
+const genres = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_GENRES':
+            console.log(action.payload)
+            return action.payload;
+        default:
+            return state;
+    }
+}
 
 
 // SAGA function for fetching movies from database
@@ -88,15 +101,6 @@ const movies = (state = [], action) => {
     }
 }
 
-// Used to store the movie genres
-const genres = (state = [], action) => {
-    switch (action.type) {
-        case 'SET_GENRES':
-            return action.payload;
-        default:
-            return state;
-    }
-}
 
 // Create one store that all components can use
 const storeInstance = createStore(

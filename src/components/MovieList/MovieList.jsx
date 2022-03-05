@@ -25,8 +25,7 @@ function MovieList() {
         console.log(movie.id, movie);
         history.push('/details');
         dispatch({ type: 'DETAILS', payload: movie});
-
-        dispatch({type: 'FETCH_GENRES', payload: movie.id})
+        dispatch({type: 'FETCH_GENRES', payload: movie.id});
 
     }
 

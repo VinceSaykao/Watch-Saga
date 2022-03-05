@@ -5,7 +5,7 @@ import React, {useEffect} from 'react';
 
 export default function MovieDetails() {
     const details = useSelector(store => store.detailsReducer);
-
+    const genre = useSelector(store => store.genres);
     useEffect(() => {
     }, []);
 
@@ -24,7 +24,15 @@ export default function MovieDetails() {
                 <p>{details.description}</p>
 
             </div>
-           
+
+            {genre.map(item => (
+                <div key={item.id}>
+                    <div>{item.name}</div>
+                    </div>
+            ))}
+
+
+        
             <button id='back-details'
                 onClick={back}
             >BACK</button>
