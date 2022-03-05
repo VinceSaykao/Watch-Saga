@@ -14,8 +14,10 @@ import axios from 'axios';
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
+    yield takeEvery('ADD_MOVIES', addAllMovies);
 }
 
+// SAGA function for fetching movies from database
 function* fetchAllMovies() {
     // get all movies from the DB
     try {
@@ -26,13 +28,34 @@ function* fetchAllMovies() {
     } catch {
         console.log('get all error');
     }
-        
+}; // end of fetchAllMovies
+
+// SAGA generator function for adding movies
+function* addAllMovies(action) {
+    try {
+        yield axios.post('/api/movie', action.payload);
+        yield put({type: 'FETCH_MOVIES'});
+    } catch(error) {
+        console.log('posting in addAllMovies', error);
+    }
+}; // end of postAllMovies
+
+// Reducer for the addAllMovies SAGA
+const addAllMoviesReducer = (state = [], action) => {
+    switch (action.type) {
+        case 'POST_MOVIE':
+            return action.payload;
+        default:
+            return state;
+    }
 }
+
+
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
-// Used to store movies returned from the server
+// Used to store movies returned from the server || Movies Reducer
 const movies = (state = [], action) => {
     switch (action.type) {
         case 'SET_MOVIES':
@@ -57,6 +80,7 @@ const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
+        addAllMoviesReducer,
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
@@ -68,7 +92,7 @@ sagaMiddleware.run(rootSaga);
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={storeInstance}>
-        <App />
+            <App />
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')
