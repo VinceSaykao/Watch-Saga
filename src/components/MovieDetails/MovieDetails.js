@@ -16,7 +16,7 @@ export default function MovieDetails() {
     }
 
     return (
-        <div>
+        <div id='movie-details'>
             <div id='details'>
 
                 <img src={details.poster} />
@@ -24,9 +24,8 @@ export default function MovieDetails() {
                 <p>{details.description}</p>
 
             </div>
-            <br></br>
-            <br></br>
-            <button
+           
+            <button id='back-details'
                 onClick={back}
             >BACK</button>
 

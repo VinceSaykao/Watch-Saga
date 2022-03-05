@@ -7,6 +7,8 @@
   -webkit-filter: blur(1px); */
   background-color: rgba(68, 68, 68, 0.555);
   border-radius: 10px;
+  margin: auto;
+  width: 80%;
 }
 
 body {
