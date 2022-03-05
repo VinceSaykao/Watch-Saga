@@ -30,10 +30,10 @@ function* fetchAllMovies() {
     }
 }; // end of fetchAllMovies
 
-// SAGA generator function for adding movies
-function* addAllMovies() {
+// SAGA generator function for adding movies, holds action
+function* addAllMovies(action) {
     try {
-        yield axios.post('/movie', action.payload);
+        yield axios.post('/api/movie', action.payload);
         yield put({type: 'FETCH_MOVIES'});
     } catch(error) {
         console.log('posting in addAllMovies', error);
