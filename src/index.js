@@ -30,7 +30,7 @@ function* fetchAllMovies() {
     }
 }; // end of fetchAllMovies
 
-// SAGA generator function for adding movies
+// SAGA generator function for adding movies, holds action
 function* addAllMovies(action) {
     try {
         yield axios.post('/api/movie', action.payload);
