@@ -31,15 +31,16 @@ function* fetchAllMovies() {
 }; // end of fetchAllMovies
 
 // SAGA generator function for adding movies
-function* addAllMovies() {
+function* addAllMovies(action) {
     try {
-        yield axios.post('/movie', action.payload);
-        yield put({type: 'POST_MOVIE'});
+        yield axios.post('/api/movie', action.payload);
+        yield put({type: 'FETCH_MOVIES'});
     } catch(error) {
         console.log('posting in addAllMovies', error);
     }
 }; // end of postAllMovies
 
+// Reducer for the addAllMovies SAGA
 const addAllMoviesReducer = (state = [], action) => {
     switch (action.type) {
         case 'POST_MOVIE':
@@ -79,6 +80,7 @@ const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
+        addAllMoviesReducer,
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),

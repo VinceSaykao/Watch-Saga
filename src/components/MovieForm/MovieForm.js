@@ -16,9 +16,9 @@ export default function MovieForm() {
         console.log('clicked');
         console.log(movieInput, urlInput, descriptionInput);
 
-        dispatch({ type: 'ADD_MOVIES', payload: { movieInput: movieInput } });
-        dispatch({ type: 'ADD_MOVIES', payload: { urlInput, urlInput } });
-        dispatch({ type: 'ADD_MOVIES', payload: { descriptionInput, descriptionInput } });
+        dispatch({ type: 'ADD_MOVIES', payload: { title: movieInput, poster: urlInput, description: descriptionInput } });
+        // dispatch({ type: 'ADD_MOVIES', payload: { poster: urlInput } });
+        // dispatch({ type: 'ADD_MOVIES', payload: { description: descriptionInput } });
 
         // clears input value after submit is pressed
         setMovieInput('');
