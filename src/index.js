@@ -49,6 +49,17 @@ const addAllMoviesReducer = (state = [], action) => {
     }
 }
 
+// create saga that has ${id}
+
+
+const detailsReducer = (state = [], action) => {
+    switch (action.type) {
+        case 'DETAILS':
+            return action.payload;
+        default:
+            return state;
+    }
+}
 
 
 // Create sagaMiddleware
@@ -80,6 +91,7 @@ const storeInstance = createStore(
         movies,
         genres,
         addAllMoviesReducer,
+        detailsReducer,
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),

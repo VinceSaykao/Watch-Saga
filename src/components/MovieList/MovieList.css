@@ -9,10 +9,15 @@
   border-radius: 10px;
 }
 
+body {
+  background-image: url("https://coolhdwall.com/storage/202105/the-batman-movie-4k-wallpaper-3840x2160.jpg");
+  background-size: cover;
+  background-position: -300px -300px;
+}
 
- body {
-     background-image: url("https://coolhdwall.com/storage/202105/the-batman-movie-4k-wallpaper-3840x2160.jpg");
-     background-size: cover;
-     background-position: -300px -300px;
-  
-    }
+nav {
+  background-color: white;
+  width: 10%;
+  border-radius: 5px;
+
+}

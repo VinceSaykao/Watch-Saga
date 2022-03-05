@@ -8,3 +8,5 @@ router.get('/', (req, res) => {
 });
 
 module.exports = router;
+
+// where movie id=$1
