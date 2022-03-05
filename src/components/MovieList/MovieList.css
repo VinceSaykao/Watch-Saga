@@ -1,4 +1,18 @@
 .movies {
-    display : flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  text-shadow: 1px 1px 10px yellow;
+  /* filter: blur(1px);
+  -webkit-filter: blur(1px); */
+  background-color: rgba(68, 68, 68, 0.555);
+  border-radius: 10px;
 }
+
+
+ body {
+     background-image: url("https://coolhdwall.com/storage/202105/the-batman-movie-4k-wallpaper-3840x2160.jpg");
+     background-size: cover;
+     background-position: -300px -300px;
+  
+    }

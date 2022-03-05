@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-
 
 export default function MovieForm() {
 
@@ -29,8 +27,16 @@ export default function MovieForm() {
         setUrlInput('');
         setDescriptionInput('');
 
-
+        // will push user back to homepage
+        history.push('/');
     }
+
+    // cancels your inputs and brings user to homepage
+    function handleCancel() {
+        // will push user back to homepage
+        history.push('/');
+
+    }; // end of handleCancel
 
     return (
     <div>
@@ -53,7 +59,12 @@ export default function MovieForm() {
     <button
     onClick={handleSubmit}
     >
-        Submit
+        Save
+    </button>
+    <button
+    onClick={handleCancel}
+    >
+        Cancel
     </button>
     </div>
     )
