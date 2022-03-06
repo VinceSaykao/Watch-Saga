@@ -16,14 +16,21 @@ p {
 
 #detail-title {
     color:white;
-    text-shadow: 1px 1px 10px yellow;
+    text-shadow: 1px 1px 10px rgb(251, 255, 0);
 }
 
-#back-details {
-    top: 0;
-    margin-top: 100px;
+.detail-poster {
+    box-shadow: 1px 1px 500px white;
+    border-radius: 10px;
 }
+
 
 .genre-names {
-    color:white;
+    color:yellow;
+    text-shadow: 1px 1px 10px #fff;
+    font-size: 15px;
+    width: 300px;
+    margin: auto;
+    background-color: rgba(255, 10, 1, 0.534);
 }
+

@@ -13,6 +13,7 @@ export default function MovieDetails() {
     const history = useHistory();
 
     function back() {
+        console.log('back')
         history.push('/');
     }
 
@@ -20,8 +21,11 @@ export default function MovieDetails() {
         <div id='movie-details'>
             <div id='details'>
 
-                <img src={details.poster} />
-
+                <img 
+                onClick={back}
+                className='detail-poster'
+                src={details.poster} />
+                <div className='genre-map'>
                 {genre.map(item => (
                     <div key={item.id}>
                         <div
@@ -29,20 +33,21 @@ export default function MovieDetails() {
                         >{item.name}</div>
                     </div>
                 ))}
+                </div>
+
 
                 <h1 id='detail-title'> {details.title} </h1>
                 <p>{details.description}</p>
             </div>
 
+                <Button
+                    id='back-details'
+                    variant='contained'
+                    onClick={back}
+                >BACK</Button>
 
 
 
-            <Button
-                id='back-details'
-                variant='contained'
-
-                onClick={back}
-            >BACK</Button>
 
         </div>
     )

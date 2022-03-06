@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './MovieList.css';
 import { Button } from '@material-ui/core/';
+import Header from '../Header/Header.js';
 
 function MovieList() {
     let history = useHistory();
@@ -23,11 +24,13 @@ function MovieList() {
         history.push('/details');
         dispatch({ type: 'DETAILS', payload: movie});
         dispatch({type: 'FETCH_GENRES', payload: movie.id});
-    }
+    }; // end of clickThis
 
     return (
         <main>
+            <Header />
             <Button
+                id='button-add-movie'
                 variant='contained'
                 onClick={addMovie}
             >Add A Movie</Button>
@@ -35,7 +38,6 @@ function MovieList() {
                 {movies.map(movie => {
                     return (
                         <div key={movie.id} >
-                
                             <img 
                             onClick= {() => clickThis(movie)}
                             src={movie.poster} alt={movie.title} />
@@ -44,7 +46,6 @@ function MovieList() {
                 })}
             </section>
         </main>
-
     );
 }
 

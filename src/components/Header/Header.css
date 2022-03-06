@@ -1,4 +1,6 @@
 #header {
     color: white;
-    background-color: #4444;
+    width: 25%;
+    margin: auto;
+    text-shadow: 1px 1px 10px black;
 }
