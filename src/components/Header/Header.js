@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import Carousel from 'react-elastic-carousel';
 import Card from'./Card';
 // import MovieForm from '../MovieForm/MovieForm';
+import React, {Component} from 'react';
 
 
 
@@ -14,6 +15,7 @@ export default function Header() {
         console.log('moved');
         history.push('/home');
     }
+
 
     const breakPoints = [
         {width: 500, itemsToShow: 1},
@@ -32,9 +34,6 @@ export default function Header() {
         <Card number='5'/>
         <Card number='8'/>
         <Card number='7'/>
-
-
-
     </Carousel>
 
 

@@ -2,7 +2,6 @@
 .movie-poster {
   transition: transform 450ms;
   height: 400px;
-
 }
 .movies {
   object-fit: contain;

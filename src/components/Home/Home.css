@@ -1,4 +1,4 @@
-#form-div {
+#home-div {
   background-image: url("https://wallpaperaccess.com/full/304001.jpg");
   background-size: cover;
   height: 600px;
@@ -27,16 +27,17 @@
   text-shadow: 1px 1px 20px rgb(49, 220, 250);
 }
 
-#form-div:hover {
+#home-div:hover {
   box-shadow: 1px 1px 30px 1px rgb(240, 52, 52);
 }
 
-#form-back {
+#home-back {
   height: 100%;
   background-size: cover;
   background-position: 400px -800px;
   background-repeat: no-repeat;
   margin: auto;
+  background-image: url('spidey.png');
 }
 
 @keyframes turns {

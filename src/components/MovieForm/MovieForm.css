@@ -1,5 +1,5 @@
 #form-div {
-    background-image: url('https://wallpaperaccess.com/full/304001.jpg');
+    background-image: url('https://4kwallpapers.com/images/wallpapers/sith-star-wars-lightsaber-dark-background-3840x2160-5554.jpg');
     background-size: cover;
     /* height: 300px; */
     /* margin: 15% 10% auto; */
@@ -10,8 +10,12 @@
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: 1px 1px 30px 5px rgb(70, 241, 84);
-    animation: animate 5s linear infinite;
+    animation: animate 3s linear infinite;
     
+}
+
+#movie-input {
+    margin: 25% auto;
 }
 
 #form-div:hover {
@@ -20,10 +24,10 @@
 }
 
 #form-back {
-    background-image: url('spidey.png');
+    background-image: url('https://images.hdqwalls.com/download/star-wars-the-rise-of-skywalker-new-5k-rh-1920x1080.jpg');
+    background-position: 0% 0%;
     height: 100%;
     background-size: cover;
-    background-position: 400px -800px;
-    background-repeat: no-repeat;
     margin: auto;
+    animation: animate 3s linear infinite;
 }

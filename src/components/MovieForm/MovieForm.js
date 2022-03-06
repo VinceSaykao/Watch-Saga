@@ -23,8 +23,7 @@ export default function MovieForm() {
         console.log(movieInput, urlInput, descriptionInput);
 
         dispatch({ type: 'ADD_MOVIES', payload: { title: movieInput, poster: urlInput, description: descriptionInput } });
-        // dispatch({ type: 'ADD_MOVIES', payload: { poster: urlInput } });
-        // dispatch({ type: 'ADD_MOVIES', payload: { description: descriptionInput } });
+
 
         // clears input value after submit is pressed
         setMovieInput('');
@@ -46,6 +45,7 @@ export default function MovieForm() {
         <div id='form-back'>
     <div id='form-div'>
     <input 
+    id='movie-input'
     value={movieInput}
     onChange={evt => setMovieInput(evt.target.value)}
     
