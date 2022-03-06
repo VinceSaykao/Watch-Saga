@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from "react-router-dom";
+import './MovieForm.css';
 
 export default function MovieForm() {
 
@@ -42,7 +43,8 @@ export default function MovieForm() {
     }; // end of handleCancel
 
     return (
-    <div>
+        <div id='form-back'>
+    <div id='form-div'>
     <input 
     value={movieInput}
     onChange={evt => setMovieInput(evt.target.value)}
@@ -69,6 +71,7 @@ export default function MovieForm() {
     >
         Cancel
     </button>
+    </div>
     </div>
     )
 
