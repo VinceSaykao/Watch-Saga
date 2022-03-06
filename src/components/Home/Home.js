@@ -1,20 +1,22 @@
 import './Home.css';
-
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from "react-router-dom";
 
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
+
 
 export default function MovieForm() {
 
-    let history=useHistory();
+    let history = useHistory();
 
 
-    
+
     // local state that will be an empty string and be updated with new value upon user input
     const [movieInput, setMovieInput] = useState('');
-    let [ urlInput, setUrlInput ] = useState('');
-    let [descriptionInput, setDescriptionInput ] = useState('');
+    let [urlInput, setUrlInput] = useState('');
+    let [descriptionInput, setDescriptionInput] = useState('');
 
     const dispatch = useDispatch();
 
@@ -52,14 +54,30 @@ export default function MovieForm() {
 
     return (
         <div id='form-back'>
-    <div id='form-div'>
-        <h1
-        id='welcome'
-        >WELCOME TO <span id='watch-saga'
-        onClick={moveMovie}
-        >WATCH SAGA</span></h1>
-    </div>
-    </div>
+            <div id='form-div'
+                onClick={moveMovie}>
+                <h1
+                    id='welcome'
+                >WELCOME TO <span id='watch-saga'
+                    onClick={moveMovie}
+                >WATCH SAGA</span></h1>
+
+
+
+            </div>
+            <div className="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                
+                
+            </div>
+
+        </div>
     )
 
 }; // end of MovieForm
