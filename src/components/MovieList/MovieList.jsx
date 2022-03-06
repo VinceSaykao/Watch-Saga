@@ -34,6 +34,11 @@ function MovieList() {
                 variant='contained'
                 onClick={addMovie}
             >Add MOVIES</Button>
+            {/* <h6 id='terms'>
+                By watching Watch Saga movies and TV series you agree to our Terms & Conditions 
+            </h6> */}
+            <br></br>
+            <h1 id='recently'>Recently Added</h1>
             <section className="movies">
                 {movies.map(movie => {
                     return (
