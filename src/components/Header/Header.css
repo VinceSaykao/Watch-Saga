@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 
+
+
 #header {
   color: rgb(9, 204, 238);
-  margin: auto;
+  margin: 70px auto;
   width: 85%;
-  height: 450px;
-
-  /* animation: animate 5s linear infinite; */
+  height: 500px;
   font-family: Staatliches;
   background-position: -100px -900px;
   border-radius: 10px;
@@ -14,14 +14,17 @@
 }
 
 #movie-saga {
-  font-size: 100px;
+  /* vertical-align: middle;
+  line-height: 4.5; */
+  position: fixed;
+  margin: -75px 1px 1px 1px;
+  font-size: 60px;
   color: red;
-  vertical-align: middle;
-  line-height: 4.5;
   letter-spacing: 15px;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px white;
   backdrop-filter: blur(1.5px);
+  display: flex;
 }
 
 #movie-saga:hover {

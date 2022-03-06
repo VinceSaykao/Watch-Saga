@@ -1,27 +1,48 @@
+
+.movie-poster {
+  transition: transform 450ms;
+  height: 400px;
+
+}
 .movies {
+  object-fit: contain;
+  width: 100%;
+  max-height: 400px;
   display: flex;
-  flex-wrap: wrap; 
-  color: white;
-  text-shadow: 1px 1px 10px yellow;
-  background-color: rgba(68, 68, 68, 0.555);
+  /* background-color: rgba(68, 68, 68, 0.555); */
+  /* box-shadow: 0px 0px 10px rgb(255, 255, 255); */
   border-radius: 10px;
   margin: auto;
   width: 85%;
-  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
 }
 
 .movies * {
-  margin: 0.2rem auto 0.1rem auto;
-  box-shadow: 1px 5px 20px rgba(255, 255, 255, 0.829);
-  border-radius: 25px;
+  margin-right: 10px;
+  /* margin: 0.2rem auto 0.1rem auto; */
+  /* box-shadow: 1px 5px 20px rgba(255, 255, 255, 0.829); */
+  border-radius: 10px;
+}
+
+.movie-poster-webkit-scrollbar {
+  display: none;
 }
 
 .movies:hover{
   color:white;
 }
 
+
+
+.movie-poster:hover {
+  box-shadow: 0px 0px 30px rgb(90, 222, 255);
+  transform: scale(1.08);
+}
+
+
 body {
-  /* background-image: url("https://coolhdwall.com/storage/202105/the-batman-movie-4k-wallpaper-3840x2160.jpg"); */
   background-color: black;
   background-size: cover;
   background-position: -300px -300px;
@@ -43,16 +64,10 @@ body {
 }
 
 
-
 nav {
   background-color: white;
   width: 10%;
   border-radius: 5px;
-}
-
-img {
-  height: 400px;
-  width: 300px;
 }
 
 #button-add-movie {
@@ -63,36 +78,7 @@ img {
   
 }
 
-img:hover {
+/* img:hover {
   box-shadow: 1px 1px 20px 10px rgb(78, 190, 255);
-}
+} */
 
-#close-icon {
-  position: absolute;
-  left: 90%;
-  top: 1%;
-  font-size: 60px;
-  color: rgb(170, 170, 170);
- 
-  border-radius: 50px;
-}
-
-#close-icon:hover {
-  color: white;
-  background-color: rgba(112, 112, 112, 0.082);
-  box-shadow: 0px 0px 10px 4px white;
-  animation: animate 5s linear infinite;
-}
-
-@keyframes animate
-{
-  0% 
-  {
-    transform: rotate(0deg);
-    filter: hue-rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg);
-    filter: hue-rotate(360deg);
-  }
-}

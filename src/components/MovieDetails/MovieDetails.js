@@ -2,7 +2,6 @@ import { useSelector } from 'react-redux';
 import './MovieDetails.css';
 import { useHistory } from 'react-router-dom';
 import React, { useEffect } from 'react';
-import { Button } from '@material-ui/core/';
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function MovieDetails() {
@@ -45,11 +44,7 @@ export default function MovieDetails() {
                 <p>{details.description}</p>
             </div>
 
-                <Button
-                    id='back-details'
-                    variant='contained'
-                    onClick={back}
-                >BACK</Button>
+        
 
 
 

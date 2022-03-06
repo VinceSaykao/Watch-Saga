@@ -1,0 +1,29 @@
+#form-div {
+    background-image: url('https://wallpaperaccess.com/full/304001.jpg');
+    background-size: cover;
+    /* height: 300px; */
+    /* margin: 15% 10% auto; */
+    height: 600px;
+    width: 1200px;
+    margin: 4% auto;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 30px 5px rgb(70, 241, 84);
+    animation: animate 5s linear infinite;
+    
+}
+
+#form-div:hover {
+    box-shadow: 1px 1px 30px 1px rgb(240, 52, 52);
+
+}
+
+#form-back {
+    background-image: url('spidey.png');
+    height: 100%;
+    background-size: cover;
+    background-position: 400px -800px;
+    background-repeat: no-repeat;
+    margin: auto;
+}
