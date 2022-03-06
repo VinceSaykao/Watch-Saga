@@ -1,7 +1,8 @@
 import { useSelector } from 'react-redux';
 import './MovieDetails.css';
 import { useHistory } from 'react-router-dom';
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
+import { Button } from '@material-ui/core/';
 
 export default function MovieDetails() {
     const details = useSelector(store => store.detailsReducer);
@@ -20,22 +21,28 @@ export default function MovieDetails() {
             <div id='details'>
 
                 <img src={details.poster} />
+
+                {genre.map(item => (
+                    <div key={item.id}>
+                        <div
+                            className='genre-names'
+                        >{item.name}</div>
+                    </div>
+                ))}
+
                 <h1 id='detail-title'> {details.title} </h1>
                 <p>{details.description}</p>
-
             </div>
 
-            {genre.map(item => (
-                <div key={item.id}>
-                    <div>{item.name}</div>
-                    </div>
-            ))}
 
 
-        
-            <button id='back-details'
+
+            <Button
+                id='back-details'
+                variant='contained'
+
                 onClick={back}
-            >BACK</button>
+            >BACK</Button>
 
         </div>
     )

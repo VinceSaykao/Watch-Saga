@@ -1,6 +1,6 @@
 .movies {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   color: white;
   text-shadow: 1px 1px 10px yellow;
   /* filter: blur(1px);
@@ -8,12 +8,18 @@
   background-color: rgba(68, 68, 68, 0.555);
   border-radius: 10px;
   margin: auto;
-  width: 80%;
+  width: 85%;
+  box-shadow: 1px 1px 10px rgb(255, 255, 255);
+}
+
+.movies * {
+  margin: 0.5rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.438);
+  box-shadow: 1px 1px 10px rgb(255, 255, 255);
 }
 
 body {
-  /* background-image: url("https://coolhdwall.com/storage/202105/the-batman-movie-4k-wallpaper-3840x2160.jpg"); */
-  background-color: #444;
+  background-image: url("https://coolhdwall.com/storage/202105/the-batman-movie-4k-wallpaper-3840x2160.jpg");
   background-size: cover;
   background-position: -300px -300px;
 }

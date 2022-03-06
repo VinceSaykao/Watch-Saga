@@ -6,7 +6,6 @@ p {
     margin: auto;
 }
 
-
 #details {
     background-color: rgba(4, 0, 59, 0.719);
     margin: auto;
@@ -23,4 +22,8 @@ p {
 #back-details {
     top: 0;
     margin-top: 100px;
+}
+
+.genre-names {
+    color:white;
 }
