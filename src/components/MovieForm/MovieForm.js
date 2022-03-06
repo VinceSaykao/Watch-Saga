@@ -50,27 +50,32 @@ export default function MovieForm() {
     onChange={evt => setMovieInput(evt.target.value)}
     
     />
-
+    
     <input 
     value={urlInput}
     onChange={evt => setUrlInput(evt.target.value)}
     />
-
+    
     <textarea 
     value={descriptionInput}
     onChange={evt => setDescriptionInput(evt.target.value)}
     />
     
-    <button
-    onClick={handleSubmit}
-    >
-        Save
-    </button>
-    <button
-    onClick={handleCancel}
-    >
-        Cancel
-    </button>
+<ul>
+    <li>
+        <h3
+        data-text="save"
+        onClick={handleSubmit}
+        >&nbsp;save</h3>
+        </li>
+        <li>
+        <h3
+        onClick={handleCancel}
+        data-text="Cancel"
+        >&nbsp;Cancel</h3>
+
+        </li>
+    </ul>
     </div>
     </div>
     )
