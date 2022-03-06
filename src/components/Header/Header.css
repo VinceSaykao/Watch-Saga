@@ -1,15 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 
 #header {
   color: rgb(9, 204, 238);
-  width: 100%;
-  font-size: 40px;
   margin: auto;
-  text-shadow: 1px 1px 10px black;
+  width: 85%;
+  height: 450px;
+
+  /* animation: animate 5s linear infinite; */
+  font-family: Staatliches;
+  background-position: -100px -900px;
+  border-radius: 10px;
+  background-image: url("https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+}
+
+#movie-saga {
+  font-size: 100px;
+  color: red;
+  vertical-align: middle;
+  line-height: 4.5;
   letter-spacing: 15px;
   text-transform: uppercase;
-  animation: animate 5s linear infinite;
-  font-family: Permanent Marker;
+  text-shadow: 1px 1px 1px white;
+  backdrop-filter: blur(1.5px);
+}
+
+#movie-saga:hover {
+  animation: animate 3s linear infinite;
 }
 
 @keyframes animate {
