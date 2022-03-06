@@ -44,12 +44,20 @@ export default function MovieForm() {
 
     }; // end of handleCancel
 
+    function moveMovie() {
+        history.push('/');
+
+    }
+
+
     return (
         <div id='form-back'>
     <div id='form-div'>
         <h1
         id='welcome'
-        >WELCOME TO <span id='watch-saga'>WATCH SAGA</span></h1>
+        >WELCOME TO <span id='watch-saga'
+        onClick={moveMovie}
+        >WATCH SAGA</span></h1>
     </div>
     </div>
     )

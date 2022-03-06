@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './MovieList.css';
 import { Button } from '@material-ui/core/';
@@ -14,7 +14,7 @@ export default function MovieList() {
 
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
-        
+
     }, []);
 
     function addMovie() {
@@ -24,21 +24,21 @@ export default function MovieList() {
     function clickThis(movie) {
         console.log(movie.id, movie);
         history.push('/details');
-        dispatch({ type: 'DETAILS', payload: movie});
-        dispatch({type: 'FETCH_GENRES', payload: movie.id});
+        dispatch({ type: 'DETAILS', payload: movie });
+        dispatch({ type: 'FETCH_GENRES', payload: movie.id });
     }; // end of clickThis
 
 
 
-        const [hover, setHover] = useState(false);
-        const onHover = () => {
-          setHover(true);
-        };
-      
-        const onLeave = () => {
-          setHover(false);
-        };
-    
+    const [hover, setHover] = useState(false);
+    const onHover = () => {
+        setHover(true);
+    };
+
+    const onLeave = () => {
+        setHover(false);
+    };
+
 
     return (
         <main>
@@ -56,22 +56,22 @@ export default function MovieList() {
             <section className="movies">
                 {movies.map(movie => {
                     return (
-                        <div key={movie.id} 
+                        <div key={movie.id}
                         // onMouseEnter={onHover}
                         // onMouseLeave={onLeave}
                         // role="button"
                         // tabIndex="-3"
-                  
+
                         >
-                            <img 
-                          
-                            
-                            onClick= {() => clickThis(movie)}
-                            src={movie.poster} alt={movie.title} />
+                            <img
+
+
+                                onClick={() => clickThis(movie)}
+                                src={movie.poster} alt={movie.title} />
                         </div>
                     );
                 })}
-                 {/* {hover ? "SKILLS" : <MovieDetails />} */}
+                {/* {hover ? "SKILLS" : <MovieDetails />} */}
             </section>
         </main>
     );
