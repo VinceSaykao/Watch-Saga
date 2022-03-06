@@ -3,6 +3,7 @@ import './MovieDetails.css';
 import { useHistory } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import { Button } from '@material-ui/core/';
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function MovieDetails() {
     const details = useSelector(store => store.detailsReducer);
@@ -19,6 +20,10 @@ export default function MovieDetails() {
 
     return (
         <div id='movie-details'>
+                <CloseIcon 
+                id='close-icon'
+                onClick={back}
+                />
             <div id='details'>
 
                 <img 

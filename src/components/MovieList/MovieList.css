@@ -16,6 +16,10 @@
   border-radius: 25px;
 }
 
+.movies:hover{
+  color:white;
+}
+
 body {
   /* background-image: url("https://coolhdwall.com/storage/202105/the-batman-movie-4k-wallpaper-3840x2160.jpg"); */
   background-color: black;
@@ -53,7 +57,42 @@ img {
 
 #button-add-movie {
   margin: 10px auto 50px auto;
-  right: 10px;
-  top: -10px;
+  right: 106px;
+  top: -65px;
   position: fixed;
+  
+}
+
+img:hover {
+  box-shadow: 1px 1px 20px 10px rgb(78, 190, 255);
+}
+
+#close-icon {
+  position: absolute;
+  left: 90%;
+  top: 1%;
+  font-size: 60px;
+  color: rgb(170, 170, 170);
+ 
+  border-radius: 50px;
+}
+
+#close-icon:hover {
+  color: white;
+  background-color: rgba(112, 112, 112, 0.082);
+  box-shadow: 0px 0px 10px 4px white;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate
+{
+  0% 
+  {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
 }
