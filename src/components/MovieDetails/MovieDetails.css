@@ -1,0 +1,36 @@
+p {
+    color:white;
+    width:95%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#details {
+    background-color: rgba(4, 0, 59, 0.719);
+    margin: auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px yellow;
+}
+
+#detail-title {
+    color:white;
+    text-shadow: 1px 1px 10px rgb(251, 255, 0);
+}
+
+.detail-poster {
+    box-shadow: 1px 1px 500px white;
+    border-radius: 10px;
+}
+
+
+.genre-names {
+    color:yellow;
+    text-shadow: 1px 1px 10px #fff;
+    font-size: 15px;
+    width: 300px;
+    margin: auto;
+    background-color: rgba(255, 10, 1, 0.534);
+}
+

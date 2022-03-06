@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-
+import { useHistory } from "react-router-dom";
 
 export default function MovieForm() {
 
+    let history=useHistory();
+
+
+    
     // local state that will be an empty string and be updated with new value upon user input
     const [movieInput, setMovieInput] = useState('');
     let [ urlInput, setUrlInput ] = useState('');
     let [descriptionInput, setDescriptionInput ] = useState('');
 
     const dispatch = useDispatch();
+
 
     // this function will dispatch to root-saga when submit is clicked
     function handleSubmit() {
@@ -25,7 +30,16 @@ export default function MovieForm() {
         setUrlInput('');
         setDescriptionInput('');
 
+        // will push user back to homepage
+        history.push('/');
     }
+
+    // cancels your inputs and brings user to homepage
+    function handleCancel() {
+        // will push user back to homepage
+        history.push('/');
+
+    }; // end of handleCancel
 
     return (
     <div>
@@ -48,7 +62,12 @@ export default function MovieForm() {
     <button
     onClick={handleSubmit}
     >
-        Submit
+        Save
+    </button>
+    <button
+    onClick={handleCancel}
+    >
+        Cancel
     </button>
     </div>
     )

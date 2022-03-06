@@ -1,31 +1,51 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import './MovieList.css'
+import { useHistory } from 'react-router-dom';
+import './MovieList.css';
+import { Button } from '@material-ui/core/';
+import Header from '../Header/Header.js';
 
 function MovieList() {
-
+    let history = useHistory();
     const dispatch = useDispatch();
     const movies = useSelector(store => store.movies);
 
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
+        
     }, []);
+
+    function addMovie() {
+        history.push('/addMovie')
+    }; // end of addMovie
+
+    function clickThis(movie) {
+        console.log(movie.id, movie);
+        history.push('/details');
+        dispatch({ type: 'DETAILS', payload: movie});
+        dispatch({type: 'FETCH_GENRES', payload: movie.id});
+    }; // end of clickThis
 
     return (
         <main>
-            <h1>MovieList</h1>
+            <Header />
+            <Button
+                id='button-add-movie'
+                variant='contained'
+                onClick={addMovie}
+            >Add A Movie</Button>
             <section className="movies">
                 {movies.map(movie => {
                     return (
                         <div key={movie.id} >
-                            <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title}/>
+                            <img 
+                            onClick= {() => clickThis(movie)}
+                            src={movie.poster} alt={movie.title} />
                         </div>
                     );
                 })}
             </section>
         </main>
-
     );
 }
 
