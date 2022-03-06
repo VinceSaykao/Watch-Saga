@@ -1,26 +1,37 @@
-main {
+.movies {
   object-fit: contain;
   width: 100%;
   max-height: 400px;
-}
-
-.movies {
   display: flex;
   /* background-color: rgba(68, 68, 68, 0.555); */
   /* box-shadow: 0px 0px 10px rgb(255, 255, 255); */
   border-radius: 10px;
   margin: auto;
   width: 85%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
 }
 
 .movies * {
-  margin: 0.2rem auto 0.1rem auto;
-  box-shadow: 1px 5px 20px rgba(255, 255, 255, 0.829);
-  border-radius: 25px;
+  margin-right: 10px;
+  /* margin: 0.2rem auto 0.1rem auto; */
+  /* box-shadow: 1px 5px 20px rgba(255, 255, 255, 0.829); */
+  border-radius: 10px;
 }
+
 
 .movies:hover{
   color:white;
+}
+
+.movie-poster {
+  transition: transform 450ms;
+}
+
+.movie-poster:hover {
+  box-shadow: 0px 0px 30px rgb(90, 222, 255);
+  transform: scale(1.08);
 }
 
 body {

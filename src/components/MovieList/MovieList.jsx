@@ -64,8 +64,7 @@ export default function MovieList() {
 
                         >
                             <img
-
-
+                                className='movie-poster'
                                 onClick={() => clickThis(movie)}
                                 src={movie.poster} alt={movie.title} />
                         </div>
