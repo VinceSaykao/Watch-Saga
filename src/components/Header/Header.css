@@ -1,6 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 #header {
-    color: white;
-    width: 25%;
-    margin: auto;
-    text-shadow: 1px 1px 10px black;
+  color: rgb(9, 204, 238);
+  width: 100%;
+  font-size: 40px;
+  margin: auto;
+  text-shadow: 1px 1px 10px black;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  animation: animate 5s linear infinite;
+  font-family: Permanent Marker;
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }

@@ -33,7 +33,7 @@ function MovieList() {
                 id='button-add-movie'
                 variant='contained'
                 onClick={addMovie}
-            >Add A Movie</Button>
+            >Add MOVIES</Button>
             <section className="movies">
                 {movies.map(movie => {
                     return (
