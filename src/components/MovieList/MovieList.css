@@ -1,3 +1,9 @@
+
+.movie-poster {
+  transition: transform 450ms;
+  height: 400px;
+
+}
 .movies {
   object-fit: contain;
   width: 100%;
@@ -20,19 +26,21 @@
   border-radius: 10px;
 }
 
+.movie-poster-webkit-scrollbar {
+  display: none;
+}
 
 .movies:hover{
   color:white;
 }
 
-.movie-poster {
-  transition: transform 450ms;
-}
+
 
 .movie-poster:hover {
   box-shadow: 0px 0px 30px rgb(90, 222, 255);
   transform: scale(1.08);
 }
+
 
 body {
   background-color: black;

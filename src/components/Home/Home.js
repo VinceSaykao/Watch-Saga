@@ -58,9 +58,9 @@ export default function MovieForm() {
                 onClick={moveMovie}>
                 <h1
                     id='welcome'
-                >WELCOME TO <span id='watch-saga'
+                >Welcome Back, Ready To <span id='watch-saga'
                     onClick={moveMovie}
-                >WATCH SAGA</span></h1>
+                >WATCH SAGA?</span></h1>
 
 
 
@@ -73,7 +73,7 @@ export default function MovieForm() {
                 <span></span>
                 <span></span>
                 <span></span>
-                
+
                 
             </div>
 

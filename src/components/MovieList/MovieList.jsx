@@ -5,6 +5,8 @@ import './MovieList.css';
 import { Button } from '@material-ui/core/';
 import Header from '../Header/Header.js';
 import MovieDetails from '../MovieDetails/MovieDetails'
+import Carousel from 'react-elastic-carousel';
+import Card from'./Card';
 
 
 export default function MovieList() {
@@ -29,15 +31,13 @@ export default function MovieList() {
     }; // end of clickThis
 
 
+    const breakPoints = [
+        {width: 500, itemsToShow: 1},
+        {width: 768, itemsToShow: 2},
+        {width: 1200, itemsToShow: 3},
+        {width: 1500, itemsToShow: 4},
 
-    const [hover, setHover] = useState(false);
-    const onHover = () => {
-        setHover(true);
-    };
-
-    const onLeave = () => {
-        setHover(false);
-    };
+    ]
 
 
     return (
@@ -52,26 +52,29 @@ export default function MovieList() {
                 By watching Watch Saga movies and TV series you agree to our Terms & Conditions 
             </h6> */}
             <br></br>
-            <h1 id='recently'>Recently Added</h1>
+            <h1 id='recently'>Trending Now</h1>
+            <Carousel>
+            
             <section className="movies">
                 {movies.map(movie => {
                     return (
+                        
                         <div key={movie.id}
-                        // onMouseEnter={onHover}
-                        // onMouseLeave={onLeave}
-                        // role="button"
-                        // tabIndex="-3"
-
+                    
                         >
+                            <Card></Card>
                             <img
                                 className='movie-poster'
                                 onClick={() => clickThis(movie)}
                                 src={movie.poster} alt={movie.title} />
+                                
                         </div>
                     );
                 })}
-                {/* {hover ? "SKILLS" : <MovieDetails />} */}
+                
             </section>
+                
+               </Carousel>
         </main>
     );
 }
