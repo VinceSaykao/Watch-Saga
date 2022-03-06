@@ -14,13 +14,28 @@
     
 }
 
+#welcome {
+    color:white;
+    text-shadow: 1px 1px 1px black;
+
+}
+
+#watch-saga {
+    color:red;
+    font-size: 50px;
+}
+
+#watch-saga:hover {
+    color:white;
+    text-shadow: 1px 1px 20px rgb(49, 220, 250);
+}
+
 #form-div:hover {
     box-shadow: 1px 1px 30px 1px rgb(240, 52, 52);
 
 }
 
 #form-back {
-    background-image: url('spidey.png');
     height: 100%;
     background-size: cover;
     background-position: 400px -800px;
