@@ -42,6 +42,7 @@ export default function MovieForm() {
     }; // end of handleCancel
 
     return (
+        <>
         <div id='form-back'>
     <div id='form-div'>
     <input 
@@ -60,24 +61,27 @@ export default function MovieForm() {
     value={descriptionInput}
     onChange={evt => setDescriptionInput(evt.target.value)}
     />
-    
+    </div>
+
+    </div>
 <ul>
     <li>
         <h3
+        id='save'
         data-text="save"
         onClick={handleSubmit}
         >&nbsp;save</h3>
         </li>
         <li>
         <h3
+        id='cancel'
         onClick={handleCancel}
-        data-text="Cancel"
-        >&nbsp;Cancel</h3>
+        data-text="back"
+        >&nbsp;back</h3>
 
         </li>
     </ul>
-    </div>
-    </div>
+    </>
     )
 
 }; // end of MovieForm
