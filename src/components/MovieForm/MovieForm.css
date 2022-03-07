@@ -12,12 +12,17 @@
     animation: animate 3s linear infinite;
 }
 
-#movie-input {
-    margin: 25% auto;
+#outlined-basic {
+    color:white;
+    background-color: #4444;
+    border: 0.5px solid rgba(255, 255, 255, 0.651);
+    border-radius: 5px;
 }
 
 #form-div:hover {
     box-shadow: 1px 1px 50px 20px rgb(240, 52, 52);
+    
+ 
 
 }
 
