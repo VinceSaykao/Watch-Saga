@@ -13,13 +13,12 @@ function App() {
       <Route path="/home" exact>
           <Home />
         </Route>
+        <Route path="/" exact>
+          <MovieList />
+        </Route>
 
         <Route path="/addMovie" exact>
           <MovieForm />
-        </Route>
-        
-        <Route path="/" exact>
-          <MovieList />
         </Route>
         
         <Route path="/details" exact>
