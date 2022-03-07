@@ -27,13 +27,13 @@ export default function Header() {
     return (
     <div id="header">
     <Carousel breakPoints={breakPoints}>
-        <Card number='1'/>
-        <Card number='2'/>
-        <Card number='3'/>
-        <Card number='4'/>
-        <Card number='5'/>
-        <Card number='8'/>
-        <Card number='7'/>
+        <Card number=''/>
+        <Card number=''/>
+        <Card number=''/>
+        <Card number=''/>
+        <Card number=''/>
+        <Card number=''/>
+        <Card number=''/>
     </Carousel>
 
 
