@@ -72,11 +72,9 @@ export default function MovieList() {
                             </div>
                         );
                     })}
-
-                
                 </section>
-
             </Carousel>
+                    
         </main>
     );
 }
