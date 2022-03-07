@@ -53,8 +53,8 @@ export default function MovieForm() {
 
 
     return (
-        <div id='form-back'>
-            <div id='form-div'
+        <div id='home-back'>
+            <div id='home-div'
                 onClick={moveMovie}>
                 <h1
                     id='welcome'

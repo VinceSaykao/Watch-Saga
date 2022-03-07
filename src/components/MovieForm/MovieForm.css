@@ -1,29 +1,76 @@
 #form-div {
-    background-image: url('https://wallpaperaccess.com/full/304001.jpg');
-    background-size: cover;
-    /* height: 300px; */
-    /* margin: 15% 10% auto; */
-    height: 600px;
-    width: 1200px;
-    margin: 4% auto;
-    display: inline-block;
-    border-radius: 10px;
-    border: 1px solid black;
-    box-shadow: 1px 1px 30px 5px rgb(70, 241, 84);
-    animation: animate 5s linear infinite;
-    
+  background-image: url("https://4kwallpapers.com/images/wallpapers/sith-star-wars-lightsaber-dark-background-3840x2160-5554.jpg");
+  background-size: cover;
+  height: 600px;
+  width: 1200px;
+  margin: 4% auto;
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 30px 5px rgb(70, 241, 84);
+  animation: animate 3s linear infinite;
+}
+
+#outlined-basic {
+  color: white;
+  background-color: #4444;
+  border: 0.5px solid rgba(255, 255, 255, 0.651);
+  border-radius: 5px;
 }
 
 #form-div:hover {
-    box-shadow: 1px 1px 30px 1px rgb(240, 52, 52);
-
+  box-shadow: 1px 1px 50px 10px rgb(240, 52, 52);
 }
 
 #form-back {
-    background-image: url('spidey.png');
-    height: 100%;
-    background-size: cover;
-    background-position: 400px -800px;
-    background-repeat: no-repeat;
-    margin: auto;
+  background-image: url("https://images.hdqwalls.com/download/star-wars-the-rise-of-skywalker-new-5k-rh-1920x1080.jpg");
+  background-position: 0% 0%;
+  height: 100%;
+  background-size: cover;
+  margin: auto;
+  animation: animate 3s linear infinite;
+  overflow-y: hidden;
+}
+
+ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: -40% 65% 30% -6.5%;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+}
+ul li h3 {
+  position: relative;
+  font-size: 4em;
+  text-decoration: none;
+  line-height: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 0.5px white;
+}
+ul li h3::before {
+  color: rgb(79, 217, 252);
+  content: attr(data-text);
+  background-color: rgb(1, 39, 46);
+  position: absolute;
+  width: 0;
+  overflow: hidden;
+  transition: 0.65s;
+  border-right: 8px solid #fff;
+  box-shadow: 0px 0px 20px 10px rgb(79, 217, 252);
+  border-radius: 1px;
+}
+
+ul li h3:hover::before {
+  width: 55%;
+}
+
+ul li h3:active::before {
+  color: #fff;
 }

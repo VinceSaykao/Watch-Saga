@@ -6,7 +6,7 @@ import { Button } from '@material-ui/core/';
 import Header from '../Header/Header.js';
 import MovieDetails from '../MovieDetails/MovieDetails'
 import Carousel from 'react-elastic-carousel';
-import Card from'./Card';
+import Card from './Card';
 
 
 export default function MovieList() {
@@ -32,10 +32,10 @@ export default function MovieList() {
 
 
     const breakPoints = [
-        {width: 500, itemsToShow: 1},
-        {width: 768, itemsToShow: 2},
-        {width: 1200, itemsToShow: 3},
-        {width: 1500, itemsToShow: 4},
+        { width: 500, itemsToShow: 1 },
+        { width: 768, itemsToShow: 2 },
+        { width: 1200, itemsToShow: 3 },
+        { width: 1500, itemsToShow: 4 },
 
     ]
 
@@ -54,27 +54,29 @@ export default function MovieList() {
             <br></br>
             <h1 id='recently'>Trending Now</h1>
             <Carousel>
-            
-            <section className="movies">
-                {movies.map(movie => {
-                    return (
-                        
-                        <div key={movie.id}
-                    
-                        >
-                            <Card></Card>
-                            <img
-                                className='movie-poster'
-                                onClick={() => clickThis(movie)}
-                                src={movie.poster} alt={movie.title} />
-                                
-                        </div>
-                    );
-                })}
                 
-            </section>
+                <section className="movies">
+
+                    {movies.map(movie => {
+                        return (
+
+                            <div key={movie.id}
+
+                            >
+                            
+                                <img
+                                    className='movie-poster'
+                                    onClick={() => clickThis(movie)}
+                                    src={movie.poster} alt={movie.title} />
+
+                            </div>
+                        );
+                    })}
+
                 
-               </Carousel>
+                </section>
+
+            </Carousel>
         </main>
     );
 }
