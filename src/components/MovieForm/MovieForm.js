@@ -4,6 +4,8 @@ import { useHistory } from "react-router-dom";
 import './MovieForm.css';
 import TextField from '@mui/material/TextField';
 
+import Swal from 'sweetalert2';
+
 export default function MovieForm() {
 
     let history = useHistory();
@@ -23,13 +25,34 @@ export default function MovieForm() {
         console.log('clicked');
         console.log(movieInput, urlInput, descriptionInput);
 
-        dispatch({ type: 'ADD_MOVIES', payload: { title: movieInput, poster: urlInput, description: descriptionInput } });
+        if ( movieInput != ('') && urlInput != ('') && descriptionInput != ('')) {
+            return Swal.fire({
+                title: 'Add Movies?',
+                text: 'You Won\'t Be Able To Revert This',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: 'green',
+                cancelButtonColor: 'red',
+                confirmButtonText: 'Yes, add them!',
+            })
+                && dispatch({ type: 'ADD_MOVIES', payload: { title: movieInput, poster: urlInput, description: descriptionInput } })
+                // clears input value after submit is pressed
+                && setMovieInput(''),
+                setUrlInput(''),
+                setDescriptionInput('')
+        } else {
+            return  Swal.fire({
+                icon: 'error',
+                title: 'Must Have Inputs',
+                text: 'Check to see if you are missing any inputs',
+              })
+        }
 
 
-        // clears input value after submit is pressed
-        setMovieInput('');
-        setUrlInput('');
-        setDescriptionInput('');
+
+
+
+
 
         // will push user back to homepage
         history.push('/');
@@ -39,6 +62,8 @@ export default function MovieForm() {
     function handleCancel() {
         // will push user back to homepage
         history.push('/');
+
+
 
     }; // end of handleCancel
 
