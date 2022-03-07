@@ -1,16 +1,14 @@
-
 .movie-poster {
   transition: transform 450ms;
   height: 400px;
   width: 300px;
 }
+
 .movies {
   object-fit: contain;
   width: 100%;
   max-height: 400px;
   display: flex;
-  /* background-color: rgba(68, 68, 68, 0.555); */
-  /* box-shadow: 0px 0px 10px rgb(255, 255, 255); */
   border-radius: 10px;
   margin: auto;
   width: 85%;
@@ -21,11 +19,8 @@
 
 .movies * {
   margin-right: 10px;
-  /* margin: 0.2rem auto 0.1rem auto; */
-  /* box-shadow: 1px 5px 20px rgba(255, 255, 255, 0.829); */
   border-radius: 10px;
 }
-
 
 .movie-poster-webkit-scrollbar, .movies-webkit-scrollbar {
   display: none;
@@ -34,8 +29,6 @@
 .movies:hover{
   color:white;
 }
-
-
 
 .movie-poster:hover {
   box-shadow: 0px 0px 30px rgb(90, 222, 255);
@@ -79,7 +72,4 @@ nav {
   
 }
 
-/* img:hover {
-  box-shadow: 1px 1px 20px 10px rgb(78, 190, 255);
-} */
 

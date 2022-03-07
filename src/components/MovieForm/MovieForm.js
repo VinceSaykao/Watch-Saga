@@ -25,7 +25,7 @@ export default function MovieForm() {
         console.log('clicked');
         console.log(movieInput, urlInput, descriptionInput);
 
-        if ( movieInput != ('') && urlInput != ('') && descriptionInput != ('')) {
+        if (movieInput != ('') && urlInput != ('') && descriptionInput != ('')) {
             return Swal.fire({
                 title: 'Add Movies?',
                 text: 'You Won\'t Be Able To Revert This',
@@ -41,11 +41,11 @@ export default function MovieForm() {
                 setUrlInput(''),
                 setDescriptionInput('')
         } else {
-            return  Swal.fire({
+            return Swal.fire({
                 icon: 'error',
                 title: 'Must Have Inputs',
                 text: 'Check to see if you are missing any inputs',
-              })
+            })
         }
 
 
