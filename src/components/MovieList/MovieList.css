@@ -26,7 +26,8 @@
   border-radius: 10px;
 }
 
-.movie-poster-webkit-scrollbar {
+
+.movie-poster-webkit-scrollbar, .movies-webkit-scrollbar {
   display: none;
 }
 
