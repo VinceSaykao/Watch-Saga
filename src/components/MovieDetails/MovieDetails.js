@@ -3,6 +3,7 @@ import './MovieDetails.css';
 import { useHistory } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
+// import {useParams} from 'react-router-dom'; // to be used for refresh
 
 export default function MovieDetails() {
     const details = useSelector(store => store.detailsReducer);
